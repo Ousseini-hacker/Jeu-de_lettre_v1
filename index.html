@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Lettres</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jeu de Lettres</h1>
+        <p>Développé par Ousseini</p>
+    </header>
+
+    <main>
+        <div class="player-form">
+            <h2>Configurer le jeu</h2>
+            <label for="player-count">Nombre de joueurs :</label>
+            <select id="player-count">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <div id="player-names"></div>
+            <button id="start-game">Démarrer le jeu</button>
+        </div>
+
+        <div class="game-container" style="display: none;">
+            <h2>Tour de <span id="current-player"></span></h2>
+            <p>Lettre : <span id="current-letter"></span></p>
+            <div class="questions" id="questions"></div>
+            <div class="timer" id="timer">60</div>
+            <label for="answer">Votre réponse :</label>
+            <input type="text" id="answer">
+            <button id="submit-answer">Soumettre</button>
+        </div>
+
+        <div class="end-game" style="display: none;">
+            <h2>Fin de Partie</h2>
+            <ul id="scores"></ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
